@@ -1,20 +1,3 @@
-# import os
-# import openai
-
-# openai.api_key = os.getenv("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")
-
-# response = openai.Completion.create(
-#   model="text-davinci-003",
-#   prompt="The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly.\n\nHuman: Hello, who are you?\nAI: I am an AI created by OpenAI. How can I help you today?\nHuman: I'd like to cancel my subscription.\nAI:",
-#   temperature=0.9,
-#   max_tokens=150,
-#   top_p=1,
-#   frequency_penalty=0.0,
-#   presence_penalty=0.6,
-#   stop=[" Human:", " AI:"]
-# )
-
-
 from api.prompt import Prompt
 import os
 import openai
@@ -47,14 +30,3 @@ class ChatGPT:
     def add_msg(self, text):
         self.prompt.add_msg(text)
 
-# response = openai.Completion.create(
-#   model="text-davinci-003",
-#   prompt="\nHuman: 寫一篇小說\nAI:",
-#   temperature=0.9,
-#   max_tokens=150,
-#   top_p=1,
-#   frequency_penalty=0.0,
-#   presence_penalty=0.6,
-#   stop=[" Human:", " AI:"]
-# )
-# print(response["choices"][0]["text"])
